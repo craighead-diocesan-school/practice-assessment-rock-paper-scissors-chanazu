@@ -5,3 +5,27 @@ function playGame(){
 
  if (knowGame() === 'no'){
     alert('Rules description. There are three items - rock, scissors and paper - and everyone has to produce one of these items at the same time.The rock beats the scissors, the paper beats the rock and the scissors beat the paper.')
+    let userChoice = prompt("Enter your choice: rock, paper, or scissors")
+    let computerChoice = getComputerChoice();
+    let result = determineWinner(userChoice, computerChoice)
+   } 
+   function getComputerChoice(){
+      const choice = ('rock,paper,scissors')
+      const randam = ('')
+
+   function determineWinner(userChoice, computerChoice) {
+if (userChoice === computerChoice) {
+    return "It's a tie!";
+    }
+if (
+    (userChoice === "rock" && computerChoice === "scissors") ||
+    (userChoice === "scissors" && computerChoice === "paper") ||
+    (userChoice === "paper" && computerChoice === "rock")
+ ) {
+   return "You win!";
+   } else {
+   return "You lose!";
+   }
+}
+
+   
